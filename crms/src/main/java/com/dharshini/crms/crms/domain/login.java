@@ -6,10 +6,13 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="login")
+
 public class login {
     @Id
     private String username;
     private String password;
+    public login() {
+    }
     public login(String username, String password) {
         this.username = username;
         this.password = password;

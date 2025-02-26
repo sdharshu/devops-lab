@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #ff914d;
+            padding: 12px;
+            border-radius: 25px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 20px auto;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            padding: 8px;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-bar i {
+            color: white;
+            margin: 0 10px;
+        }
+
+        /* Car Listings Grid */
+        .car-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        /* Car Card */
+        .car-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .book-btn {
+            width: 100%;
+            padding: 12px;
+            background: #ff914d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background: #ff7b29;
+        }
+
+        .rating {
+            font-size: 16px;
+            color: #ffcc00;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .search-bar {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <i class="fas fa-bars"></i>
+            <input type="text" placeholder="Search for results">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <!-- Car Listings -->
+        <div class="car-list">
+            <div class="car-card">
+                <img src="https://source.unsplash.com/400x250/?suv,car" alt="Hyundai Creta">
+                <button class="book-btn">BOOK NOW</button>
+                <h3>Hyundai Creta</h3>
+                <p>Rs. 2299/day</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>(75)</span>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="https://source.unsplash.com/400x250/?sedan,car" alt="Toyota Yaris">
+                <button class="book-btn">BOOK NOW</button>
+                <h3>Toyota Yaris</h3>
+                <p>Rs. 3099/day</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐☆ <span>(75)</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
